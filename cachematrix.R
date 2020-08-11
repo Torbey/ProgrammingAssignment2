@@ -33,7 +33,7 @@ cacheSolve <- function(x, ...) {
   
   # if the inverse matrix was not already calculated and cached, 
   # create the inverse, cache it, and return it
-  if(!is.null(inv))
+  if(is.null(inv))
   {
     data <- x$get()
     inv <- solve(data)
